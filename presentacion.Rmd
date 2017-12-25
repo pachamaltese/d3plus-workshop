@@ -1,0 +1,143 @@
+---
+title: "<div id=\"brand\">Taller de D3plus</div>"
+author: "<div id=\"subbrand\">César A. Hidalgo, Dave Landry, Pachá. Enero 2018</div>"
+output:
+  revealjs::revealjs_presentation:
+    template: "templates/intro_with_background.html"
+    self_contained: false
+    reveal_plugins: ["zoom"]
+    mathjax: null
+    transition: fade
+    css: ["css/styles.css"]
+    incremental: true
+    center: false
+    # center: true
+    theme: simple
+    fig_width: 6
+    fig_height: 3.5
+    reveal_options:
+      slideNumber: true
+      controls: false
+      mouseWheel: false
+editor_options: 
+  chunk_output_type: console
+---
+
+## Agenda
+
+> - Datawheel
+> - D3plus
+> - Buenas prácticas de visualización de datos
+> - Tidy data
+> - Uso de D3plus
+
+## Datawheel
+
+> - Datawheel es una startup formada por personas del MIT Media Lab
+> - Desarrollamos plataformas de visualización
+> - A la fecha contamos con proyectos a escala nacional (DataChile) y global (OEC)
+
+## Datawheel
+
+```{r, out.width="600px", echo=FALSE}
+knitr::include_graphics("img/team.jpg")
+```
+
+Misión: *"Hacer que la información del mundo sea accesible y digerible para beneficio de todos."*
+
+## D3plus
+
+Es una librería de visualización desarrollada por Datawheel y que usamos en los siguientes proyectos:
+
+> - DataChile
+> - DataUSA
+> - Observatorio de la Complejidad Económica
+> - DataViva
+
+D3plus se puede usar en sitios estáticos, se integra con una API y es compatible con React.
+
+# Buenas prácticas de visualización de datos { .center .white data-background="#008744"}
+
+## Escalas
+
+COMPLETAR
+
+## Paletas
+
+COMPLETAR
+
+# Tidy Data { .center .white data-background="#ffa700"}
+
+## Tidy Data
+
+¿Qué es *Tidy Data*?
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/tidy-1.png")
+```
+
+Fuente: R for Data Science, Wickham & Grolemund
+
+# Uso de D3plus { .center .white data-background="#366ae2"}
+
+## Herramientas necesarias
+
+> - Python v2.7 o superior
+> - Atom u otro editor de texto plano
+
+## Descarga la última versión
+
+Ultima versión disponible: [2.0 alpha 16](https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js)
+
+## Visualización de datos univariados
+
+> - Treemap
+> - Pie
+> - Tree
+
+## Treemap
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/treemap.png")
+```
+
+## Pie
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/pie.png")
+```
+
+## Tree
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/tree.png")
+```
+
+## Visualización de datos complejos
+
+> - Plot
+
+## Plot
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/plot.png")
+```
+
+## Visualizaciones complejas
+
+> - Priestley
+> - Geomap
+
+## Priestley
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/priestley.png")
+```
+
+## Geomap
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/geomap.png")
+```
+
+# Preguntas { .center .white data-background="#ffa700"}
