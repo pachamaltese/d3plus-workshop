@@ -448,7 +448,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   <div class="reveal">
     <div class="slides">
 
-<section data-background-image="img/data-culture.jpg">
+<section data-background-image="img/hq-home.jpg">
     <h1 class="title"><div id="brand">
 Taller de D3plus
 </div></h1>
@@ -460,56 +460,54 @@ César A. Hidalgo, Dave Landry, Pachá. Enero 2018
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ul>
-<li>Datawheel</li>
-<li>D3plus</li>
-<li>Buenas prácticas de visualización de datos</li>
-<li>Tidy data</li>
-<li>Uso de D3plus</li>
+<li>El equipo detrás de D3plus</li>
+<li>¿Por qué existe D3plus?</li>
+<li>¿Cómo se usa D3plus?</li>
 </ul>
 </section>
-<section id="datawheel" class="slide level2">
-<h2>Datawheel</h2>
+<section><section id="el-equipo-detras-de-d3plus" class="titleslide slide level1 center white" data-background="#366ae2"><h1>El equipo detrás de D3plus</h1></section><section id="el-equipo-detras-de-d3plus-1" class="slide level2">
+<h2>El equipo detrás de D3plus</h2>
+<p>D3plus es una librería de visualización basada en D3 y JS desarrollada por Datawheel <img src="img/team.jpg" /> Misión: <em>“Hacer que la información del mundo sea accesible y digerible para beneficio de todos.”</em></p>
+</section><section id="el-equipo-detras-de-d3plus-2" class="slide level2">
+<h2>El equipo detrás de D3plus</h2>
 <ul>
 <li>Datawheel es una startup formada por personas del MIT Media Lab</li>
 <li>Desarrollamos plataformas de visualización</li>
 <li>A la fecha contamos con proyectos a escala nacional (DataChile) y global (OEC)</li>
 </ul>
-</section>
-<section id="datawheel-1" class="slide level2">
-<h2>Datawheel</h2>
-<p><img src="img/team.jpg" width="600px" /></p>
-<p>Misión: <em>“Hacer que la información del mundo sea accesible y digerible para beneficio de todos.”</em></p>
-</section>
-<section id="d3plus" class="slide level2">
-<h2>D3plus</h2>
-<p>Es una librería de visualización desarrollada por Datawheel y que usamos en los siguientes proyectos:</p>
+</section></section>
+<section><section id="por-que-existe-d3plus" class="titleslide slide level1 center white" data-background="#366ae2"><h1>¿Por qué existe D3plus?</h1></section><section id="por-que-existe-d3plus-1" class="slide level2">
+<h2>¿Por qué existe D3plus?</h2>
+<ul>
+<li>Creamos D3plus ya que desde el primer proyecto de Datawheel las herramientas existentes no eran suficientes</li>
+<li>El objetivo de D3plus es proveer una librería flexible, fácil de usar y escalable</li>
+<li>D3plus se puede usar en sitios estáticos, se integra con APIs y es compatible con React</li>
+<li>Además D3plus es open source (licencia MIT)</li>
+</ul>
+</section><section id="por-que-existe-d3plus-2" class="slide level2">
+<h2>¿Por qué existe D3plus?</h2>
+<p>D3plus se usa en los siguientes proyectos:</p>
 <ul>
 <li>DataChile</li>
 <li>DataUSA</li>
 <li>Observatorio de la Complejidad Económica</li>
 <li>DataViva</li>
+<li>Pantheon</li>
 </ul>
-<p>D3plus se puede usar en sitios estáticos, se integra con una API y es compatible con React.</p>
-</section>
-<section><section id="buenas-practicas-de-visualizacion-de-datos" class="titleslide slide level1 center white" data-background="#008744"><h1>Buenas prácticas de visualización de datos</h1></section><section id="escalas" class="slide level2">
-<h2>Escalas</h2>
-<p>COMPLETAR</p>
-</section><section id="paletas" class="slide level2">
-<h2>Paletas</h2>
-<p>COMPLETAR</p>
 </section></section>
-<section><section id="tidy-data" class="titleslide slide level1 center white" data-background="#ffa700"><h1>Tidy Data</h1></section><section id="tidy-data-1" class="slide level2">
-<h2>Tidy Data</h2>
-<p>¿Qué es <em>Tidy Data</em>?</p>
-<p><img src="img/tidy-1.png" width="960" /></p>
-<p>Fuente: R for Data Science, Wickham &amp; Grolemund</p>
-</section></section>
-<section><section id="uso-de-d3plus" class="titleslide slide level1 center white" data-background="#366ae2"><h1>Uso de D3plus</h1></section><section id="herramientas-necesarias" class="slide level2">
-<h2>Herramientas necesarias</h2>
+<section><section id="uso-de-d3plus" class="titleslide slide level1 center white" data-background="#366ae2"><h1>Uso de D3plus</h1></section><section id="herramientas-necesarias-para-este-taller" class="slide level2">
+<h2>Herramientas necesarias para este taller</h2>
 <ul>
 <li>Python v2.7 o superior</li>
 <li>Atom u otro editor de texto plano</li>
 </ul>
+</section><section id="configurando-lo-necesario-para-trabajar" class="slide level2">
+<h2>Configurando lo necesario para trabajar</h2>
+<p>Ya sea en Windows o *nix abre la terminal y crea un directorio en tu home o donde se pueda crear un servidor virtual</p>
+<pre><code>mkdir ~/taller-d3plus
+cd ~/taller-d3plus
+python -m SimpleHTTPServer</code></pre>
+<p>con eso listo dirígete a <code>localhost:8000</code> en tu navegador</p>
 </section><section id="descarga-la-ultima-version" class="slide level2">
 <h2>Descarga la última versión</h2>
 <p>Ultima versión disponible: <a href="https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js">2.0 alpha 16</a></p>
@@ -523,6 +521,48 @@ César A. Hidalgo, Dave Landry, Pachá. Enero 2018
 </section><section id="treemap" class="slide level2">
 <h2>Treemap</h2>
 <p><img src="img/treemap.png" width="926" /></p>
+</section><section id="treemap-1" class="slide level2">
+<h2>Treemap</h2>
+<p>Crea el archivo <code>treemap.html</code> en tu directorio de trabajo</p>
+<p>La estructura básica del archivo sigue el estándar HTML</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+
+&lt;script src=&quot;../d3plus.v2.0.0-alpha.16.full.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+
+&lt;script&gt;
+
+  CODIGO D3PLUS
+
+&lt;/script&gt;</code></pre>
+</section><section id="treemap-2" class="slide level2">
+<h2>Treemap</h2>
+<p>El código D3plus para un treemap básico es:</p>
+<pre><code>  const data = [
+    {parent: &quot;Group 1&quot;, id: &quot;Alpha&quot;, value: 29},
+    {parent: &quot;Group 1&quot;, id: &quot;Beta&quot;,  value: 10},
+    {parent: &quot;Group 1&quot;, id: &quot;Gamma&quot;, value: 2},
+    {parent: &quot;Group 2&quot;, id: &quot;Delta&quot;, value: 29},
+    {parent: &quot;Group 3&quot;, id: &quot;Eta&quot;,   value: 25}
+  ];
+
+  new d3plus.Treemap()
+    .data(data)
+    .groupBy([&quot;parent&quot;, &quot;id&quot;])
+    .render();</code></pre>
+</section><section id="treemap-3" class="slide level2">
+<h2>Treemap</h2>
+<p>Si queremos mejorar el tamaño del treemap y los bordes podemos agregar código CSS entre <code>script</code> y <code>body</code></p>
+<pre><code>&lt;style&gt;
+   body {
+      margin: 0;
+      overflow: hidden;
+    }
+&lt;/style&gt;</code></pre>
 </section><section id="pie" class="slide level2">
 <h2>Pie</h2>
 <p><img src="img/pie.png" width="926" /></p>

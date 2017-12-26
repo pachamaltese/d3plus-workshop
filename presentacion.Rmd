@@ -25,65 +25,63 @@ editor_options:
 
 ## Agenda
 
-> - Datawheel
-> - D3plus
-> - Buenas prácticas de visualización de datos
-> - Tidy data
-> - Uso de D3plus
+> - El equipo detrás de D3plus
+> - ¿Por qué existe D3plus?
+> - ¿Cómo se usa D3plus?
 
-## Datawheel
+# El equipo detrás de D3plus { .center .white data-background="#366ae2"}
+
+## El equipo detrás de D3plus
+
+D3plus es una librería de visualización basada en D3 y JS desarrollada por Datawheel 
+```{r, echo=FALSE}
+knitr::include_graphics("img/team.jpg")
+```
+Misión: *"Hacer que la información del mundo sea accesible y digerible para beneficio de todos."*
+
+## El equipo detrás de D3plus
 
 > - Datawheel es una startup formada por personas del MIT Media Lab
 > - Desarrollamos plataformas de visualización
 > - A la fecha contamos con proyectos a escala nacional (DataChile) y global (OEC)
 
-## Datawheel
+# ¿Por qué existe D3plus? { .center .white data-background="#366ae2"}
 
-```{r, out.width="600px", echo=FALSE}
-knitr::include_graphics("img/team.jpg")
-```
+## ¿Por qué existe D3plus?
 
-Misión: *"Hacer que la información del mundo sea accesible y digerible para beneficio de todos."*
+> - Creamos D3plus ya que desde el primer proyecto de Datawheel las herramientas existentes no eran suficientes
+> - El objetivo de D3plus es proveer una librería flexible, fácil de usar y escalable
+> - D3plus se puede usar en sitios estáticos, se integra con APIs y es compatible con React
+> - Además D3plus es open source (licencia MIT)
 
-## D3plus
+## ¿Por qué existe D3plus?
 
-Es una librería de visualización desarrollada por Datawheel y que usamos en los siguientes proyectos:
+D3plus se usa en los siguientes proyectos:
 
 > - DataChile
 > - DataUSA
 > - Observatorio de la Complejidad Económica
 > - DataViva
-
-D3plus se puede usar en sitios estáticos, se integra con una API y es compatible con React.
-
-# Buenas prácticas de visualización de datos { .center .white data-background="#008744"}
-
-## Escalas
-
-COMPLETAR
-
-## Paletas
-
-COMPLETAR
-
-# Tidy Data { .center .white data-background="#ffa700"}
-
-## Tidy Data
-
-¿Qué es *Tidy Data*?
-
-```{r, echo=FALSE}
-knitr::include_graphics("img/tidy-1.png")
-```
-
-Fuente: R for Data Science, Wickham & Grolemund
+> - Pantheon
 
 # Uso de D3plus { .center .white data-background="#366ae2"}
 
-## Herramientas necesarias
+## Herramientas necesarias para este taller
 
 > - Python v2.7 o superior
 > - Atom u otro editor de texto plano
+
+## Configurando lo necesario para trabajar
+
+Ya sea en Windows o *nix abre la terminal y crea un directorio en tu home o donde se pueda crear un servidor virtual
+
+```
+mkdir ~/taller-d3plus
+cd ~/taller-d3plus
+python -m SimpleHTTPServer
+```
+
+con eso listo dirígete a `localhost:8000` en tu navegador
 
 ## Descarga la última versión
 
@@ -99,6 +97,61 @@ Ultima versión disponible: [2.0 alpha 16](https://d3plus.org/js/d3plus.v2.0.0-a
 
 ```{r, echo=FALSE}
 knitr::include_graphics("img/treemap.png")
+```
+
+## Treemap
+
+Crea el archivo `treemap.html` en tu directorio de trabajo
+
+La estructura básica del archivo sigue el estándar HTML
+
+```
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="../d3plus.v2.0.0-alpha.16.full.min.js"></script>
+
+<body>
+
+</body>
+
+<script>
+
+  CODIGO D3PLUS
+
+</script>
+```
+
+## Treemap
+
+El código D3plus para un treemap básico es:
+
+```
+  const data = [
+    {parent: "Group 1", id: "Alpha", value: 29},
+    {parent: "Group 1", id: "Beta",  value: 10},
+    {parent: "Group 1", id: "Gamma", value: 2},
+    {parent: "Group 2", id: "Delta", value: 29},
+    {parent: "Group 3", id: "Eta",   value: 25}
+  ];
+
+  new d3plus.Treemap()
+    .data(data)
+    .groupBy(["parent", "id"])
+    .render();
+```
+
+## Treemap
+
+Si queremos mejorar el tamaño del treemap y los bordes podemos agregar código CSS entre `script` y `body`
+
+```
+<style>
+   body {
+      margin: 0;
+      overflow: hidden;
+    }
+</style>
 ```
 
 ## Pie
